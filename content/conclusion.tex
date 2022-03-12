@@ -1,0 +1,44 @@
+\section{Conclusion}
+A multitude of vulnerabilities have existed in every part of the Android platform.
+In particular, the platform suffers from common pitfalls encountered when a system is implemented using low-level programming languages like C and C++.
+These low level components exist in the Linux kernel layer and the native library layer in the platform's software stack.
+In the kernel layer, most of the vulnerabilities tend to come from hardware vendors implementing drivers for their products.
+In the native library layer, most vulnerabilities are derived from media-related libraries.
+
+Malware is a pervasive threat to the Android platform, DroidKungFu being a particularly sophisticated example.
+Malware, left untreated and undetected, may do significant harm to users of the platform.
+Fortunately, new developments and research projects are being conducted on an ever-growing scale to combat the issue.
+
+Other security concerns mainly pertain to inappropriate programming practices and lack of developer tools to ensure the deployment of robust code.
+Examples of this concern include SQL injections on the native SQLite library included in the Android platform as well as misused authentication protocols.
+Table \ref{tab:AndoridPlatVuln} lists the various vulnerabilities that affect each layer of the Android software stack.
+
+Steps may be taken to reduce the effect these vulnerabilities, such as updating the libraries to use modern languages with safeguards against exploitable memory errors and using compiler tools to detect faults before runtime.
+Work could be done to provide developers with tools to bolster the security of their systems by that could be used to detect, correct, and code to decrease number of vulnerabilities in the low-level systems.
+Adoption of better development practices and tools would drastically improve Android's current security situation going forward.
+However, fixing issues on existing systems would prove exceptionally challenging.
+The intense fragmentation of the platform exacerbates the issue of security by scattering the number of Android versions available on the market, making it difficult to manage and preventing some users from receiving important updates.
+
+The Android platform is used on a large scale worldwide, and is seen as a lucrative target by attackers because of its sheer scale.
+As a result, the security of the system should be ensured by the developers and maintainers of the software used to build the platform, from the Linux kernel to the application framework.
+Furthermore, maintainers of reputable application sources should constantly take steps to ensure their reputability by keeping their platform free of malicious applications that could cause damage to users.
+
+\begin{table*}[tbp]
+    \normalsize
+    \centering
+    \caption{Android Platform Vulnerabilities}
+    \label{tab:AndoridPlatVuln}
+    \begin{tabular}{p{0.25\linewidth}p{0.7\linewidth}}
+    \hline
+    \hline
+    Software Platform Layer    & Vulnerability Examples Directly Affecting the Platform Layer                                                \\ \hline
+    Linux Kernel               & Corrupted Bootloader, Buffer Overflow, Data Leaks, Insecure Driver Code, Malicious Code Injection, Rootkits \\
+    Hardware Abstraction Layer & Untrustworthy Code Written by Third Party Vendors                                                           \\
+    Native Libraries           & Buffer Overflow, Malicious Code Injection                                                                   \\
+    Android Runtime            & Side-Channel Attacks on Core Libraries                                                                      \\
+    API Framework              & Built-In Web Browser Abuse, DoS Attacks via the Activity Manager, Telephony API Misuse                      \\
+    Applications               & Absence of Database Security, Adware, Authentication Protocol Misuse, Inappropriate Permissions, Trojans    \\
+    \hline
+    \hline
+    \end{tabular}
+\end{table*}

@@ -1,0 +1,38 @@
+\section{Introduction}
+The Android operating system (OS) is a mobile computing platform designed for personal use.
+The OS platform is built on the Linux kernel and has additional components that facilitate application development and hardware interfacing \cite{AndroidDocs2022Arch}.
+The platform is an open source project licensed under the Apache License \cite{Gilski2015}.
+
+The platform consists of a number of layers referred to as the "software stack".
+The lowest layer is the Linux kernel, on which the rest of the operating system components are built.
+The next lowest layer is the hardware abstraction layer (HAL), which exists as an interface for hardware vendors to implement to ensure their hardware is compatible with the higher level components of the stack.
+The next layer is the native libraries installed on the platform, which consist of widely-used low-level implementations of common services used by applications (encryption, rendering, etc.) provided for developer convenience as well as OS functionality.
+The framework layer exists in the abstraction level above the native libraries and contains wrapper APIs for direct interfacing with a number of them.
+The applications for the platform are built using the tools listed prior.
+The Android runtime is also worth mentioning (the runtime exists at the same level of abstraction as the native libraries) because it ensures that applications run in their own virtual environment.
+
+The Android platform has been maturing for well over a decade now, and has been reported to have a significant number of vulnerabilities in that time \cite{LinaresVasquez2017, Wu2019}.
+Vulnerabilities seem to exist mostly in the Linux kernel layer and withing the supported native libraries.
+The reason for this is likely due to the difficult nature of programming using low-level languages.
+
+Android's worldwide market share is immense \cite{AndroidMarketShare2021}, which is likely what paints the platform as a lucrative target for attackers.
+DroidKungFu, a particularly sophisticated malware family that targeted Android, exposed the platform at the time of its discovery outed the platform as woefully unprepared to deal with the threat of zero-day malware attacks, even from variants of known malware families \cite{Zhou2012}.
+Since then, a significant amount of research attention has been given to the platform, especially within the domain of malware detection and prevention \cite{Faruki2015, Bhat2020}.
+
+Android applications also suffer from a number of security issues.
+Frequently, applications are implemented with incorrect protocols or applications contain misused components.
+These cases of misuse introduce vulnerabilities into the applications that uses said protocols and components \cite{Qin2020, Zhan2021, Maalouf2021}.
+Misuse of these components seems to stem partially from misunderstandings on the part of the developer.
+
+Tools to help developers avoid programmatic pitfalls are constantly being developed.
+Such tools would help programmers avoid introducing security issues into the applications made available to their user base and to the Android platform as a whole.
+Examples of new tools that developers could use to secure the system include newer, safer programming languages and software designed to detect and mitigate vulnerabilities and malware that were developed through research.
+
+This survey is partitioned into three sections.
+Section I is a brief overview of the survey.
+Section II is further divided into subsections.
+Each subsection describes a part of the Android software stack and describes key vulnerabilities that exist at that layer.
+Section III describes various malware-related vulnerabilities that exist or existed in the Android platform.
+A discussion about the efficacy of malware detection on the platform is also specified.
+Section IV describes other vulnerabilities in the Android platform that don't fit neatly anywhere else in the survey.
+Section V concludes the survey and reaffirms courses of action that may be taken to increase the overall security of the platform.

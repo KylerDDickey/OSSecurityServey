@@ -1,0 +1,63 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{textcomp}
+\usepackage[hyphens]{url}
+\usepackage{xcolor}
+
+\newcommand{\etal}{\textit{et al}. }
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{An Overview of Android Operating System Security}
+
+\author{\IEEEauthorblockN{Kyler Dickey}
+\IEEEauthorblockA{\textit{College of Engineering and Computer Science} \\
+\textit{Arkansas State University}\\
+Jonesboro, Arkansas, USA \\
+kyler.dickey@smail.astate.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+Android security is an imperative topic of discussion for researchers and developers due to its sheer scale on the market.
+The platform is an appealing target for attackers because of the open nature of the platform's development, as well as the nature of the platform itself which attracts casual users that make use of the applications and services offered by the device to store sensitive and private information.
+Android's security issues are made worse by inappropriate development practices, a lack of tools for those developers to adequately test and validate the security of their software, and the fragmentation of the platform.
+A large portion of the vulnerabilities that exist in the Android platform are derived from low-level software components of the stack due to the pitfalls of low-level programming.
+Significant research and attention have been given to the platform in the past decade, which is helping shore up the defenses of the platform to make the security components in the platform more robust and comprehensive.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Android Malware,
+Android Vulnerabilities,
+Mobile Platform Security,
+Systems Security,
+Privacy
+\end{IEEEkeywords}
+
+\input{content/introduction}
+
+\input{content/architecture}
+
+\input{content/malware}
+
+\input{content/other}
+
+\input{content/conclusion}
+
+\begingroup
+\raggedright
+\setlength{\emergencystretch}{3em}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEFull}
+\endgroup
+
+\end{document}
